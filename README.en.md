@@ -10,9 +10,9 @@ This public release repository contains Windows installers, auto-update assets, 
 
 ## Download and installation
 
-The latest stable release is [`v6.4.0`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.0). Download `heat-capacity-lab-setup-6.4.0.exe` from Releases, verify that it came from this repository, and run it.
+The latest stable release is [`v6.4.1`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.1). Download `heat-capacity-lab-setup-6.4.1.exe` from Releases, verify that it came from this repository, and run it.
 
-Users upgrading from 6.3.1 do not need to uninstall first. Version 6.4.0 retains the application ID, installer identity, update repository, and `C:\Users\<username>\AppData\Roaming\hard-sphere-lab` user-data directory. Durable Free plans, saved traces, parameter snapshots, selections, answers, fitting, calculations, and process evidence continue to restore without regenerating historical experiments under new parameters.
+The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
 Data written by the withdrawn experimental 5.1.2 build remains outside the compatibility guarantee. Back up the user-data directory before following any recovery instructions.
 
@@ -20,11 +20,25 @@ Data written by the withdrawn experimental 5.1.2 build remains outside the compa
 
 Open **Help → About** and click **Check for Updates**. A stable update requires all three matching files in the same GitHub Release:
 
-- `heat-capacity-lab-setup-6.4.0.exe`
-- `heat-capacity-lab-setup-6.4.0.exe.blockmap`
+- `heat-capacity-lab-setup-6.4.1.exe`
+- `heat-capacity-lab-setup-6.4.1.exe.blockmap`
 - `latest.yml`
 
 If automatic update fails, download the latest installer and install it over the existing copy. An uninstall is not required unless a Release explicitly documents an incompatibility.
+
+## Highlights in 6.4.1
+
+Version 6.4.1 completes Real/Ideal conditions, air/helium profiles, and staged learning for both heat-capacity experiments. It fixes piston primary-cycle detection, power-off handoff, and exact calculations from displayed values, with workbench, persistence, performance, and report improvements.
+
+- **Real/Ideal and air/helium profiles for both methods**：Both methods support Real/Ideal experiment conditions and air/helium. Ideal presets remove modeled environmental, observation, and loss disturbances while retaining manual operation, processing, and calculation. Incorrect operation still has physical consequences; Ideal provides diagnostics without numerical scores.
+- **Staged learning with Free-mode retention**：First use records familiarity with each method and unlocks Demo, Guide, and Free in sequence where learning is needed. Demo and unfinished Guide sessions do not become Free experiments. Completed guides remain reviewable, and Free data survives mode switching until a full reset.
+- **At least two primary periods and a correct power-off handoff**：Guided selections require at least two reliable primary periods. Primary-period and peak/trough detection excludes small local peaks and rejects ambiguous traces. After processing three measurements, switching power off correctly opens fitting and calculation instead of returning to parameter setup.
+- **Exact answers calculated step by step from displayed values**：Squared periods, fitting, area, heat-capacity ratio, and relative error now follow the already displayed and rounded values at every step. Decimal midpoint rounding is corrected and table/fit coordinates agree. Answers with valid precision but unequal values are rejected; no tolerance or hidden high-precision answer is used.
+- **Clear workbench responsibilities and undo boundaries**：Separates file actions, experiment controllers, read-only views, learning, safe exit, and compatibility readers while preserving experiment, sampling, and persistence contracts. Closing the complete adiabatic materials window is independently undoable and restores tab order without rewinding the experiment.
+- **Patch the update-manifest parser dependency**：Update-manifest parsing uses patched js-yaml 4.3.2, retaining normal update metadata, localized release notes, and malformed-input limits with refreshed third-party records.
+- **Retain raw records and recompute obsolete calculations**：The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
+
+Occasional long frames remain possible in the development preview. Read this Release for compatibility details.
 
 ## Experiment modules
 
@@ -53,18 +67,18 @@ Standard Simulation provides hard-sphere molecular motion, realtime sampling, an
 - `docs/releases/release-notes.json`: structured trilingual notes used by the in-app update window.
 - GitHub Releases: installers, update metadata, and complete notes for each version.
 
-Version 6.4.0 passed TypeScript checks, all `279` automated test files, the production dependency audit, license and exporter-resource consistency checks, and Windows installer plus auto-update asset verification.
+Version 6.4.1 passed strict TypeScript checks, all 346 automated test files, a production dependency audit with zero vulnerabilities, Windows installer and update-asset verification, and exact 6.4.0 → 6.4.1 differential reconstruction. Packaged workspace restoration, the fixed-port browser regression, and bundled PDF export were also checked.
 
 ## FAQ
 
 **Will upgrading remove old experiments?**  
-A normal 6.3.1 → 6.4.0 in-place upgrade reuses the existing user-data directory and preserves durable experiments and historical model snapshots. A backup is still recommended before important classes.
+The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
 **Why does Realtime Data show only “Power off”?**  
 This is the normal off state in the piston-oscillation experiment. Press the power control on the 3D instrument first.
 
 **What if auto update fails?**  
-Download the 6.4.0 installer from Releases and install it over the existing copy while retaining the user-data directory.
+Download the 6.4.1 installer from Releases and install it over the existing copy while retaining the user-data directory.
 
 **Why might Windows show a safety warning?**  
 Windows may warn about internet-downloaded installers that have not accumulated enough reputation. Verify the repository URL and Release file name before continuing.

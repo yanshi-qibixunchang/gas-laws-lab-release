@@ -1,5 +1,18 @@
 # Changelog
 
+## 6.4.1 — 2026-09-15
+
+- Both methods support Real/Ideal experiment conditions and air/helium. Ideal presets remove modeled environmental, observation, and loss disturbances while retaining manual operation, processing, and calculation. Incorrect operation still has physical consequences; Ideal provides diagnostics without numerical scores.
+- First use records familiarity with each method and unlocks Demo, Guide, and Free in sequence where learning is needed. Demo and unfinished Guide sessions do not become Free experiments. Completed guides remain reviewable, and Free data survives mode switching until a full reset.
+- Guided selections require at least two reliable primary periods. Primary-period and peak/trough detection excludes small local peaks and rejects ambiguous traces. After processing three measurements, switching power off correctly opens fitting and calculation instead of returning to parameter setup.
+- Squared periods, fitting, area, heat-capacity ratio, and relative error now follow the already displayed and rounded values at every step. Decimal midpoint rounding is corrected and table/fit coordinates agree. Answers with valid precision but unequal values are rejected; no tolerance or hidden high-precision answer is used.
+- Restores correct pointer picking when the screw interaction mirror is re-enabled after instructions. Removes the Real-helium candidate notice box without changing gas parameters or physical behavior.
+- Separates file actions, experiment controllers, read-only views, learning, safe exit, and compatibility readers while preserving experiment, sampling, and persistence contracts. Closing the complete adiabatic materials window is independently undoable and restores tab order without rewinding the experiment.
+- Hidden piston interaction mirrors stop rendering, and the standard simulation canvas avoids repeated size subscriptions and unchanged buffer resets. Physics steps and sampling are unchanged. Occasional long frames remain observable in the development preview.
+- Single-figure P–T and P–N PDFs reserve space for their conclusions and keep section headings with their text, avoiding an extra conclusion-only page without changing report data.
+- Update-manifest parsing uses patched js-yaml 4.3.2, retaining normal update metadata, localized release notes, and malformed-input limits with refreshed third-party records.
+- The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
+
 ## 6.4.0
 
 - Adds per-experiment Piston-Oscillation Free-mode process review with an instrument-operation timeline, formal trace, selected-period evidence, and expandable score details.
