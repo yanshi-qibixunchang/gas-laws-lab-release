@@ -1,5 +1,13 @@
 # Changelog
 
+## 6.4.2 — 2026-09-20
+
+- Adds strict version migrations for older piston Free sessions and measurements so records still present in storage can appear again. Raw samples, frozen parameters, and valid period readings are retained in the experiment group; obsolete fits and downstream calculations require recomputation. Unknown fields, future versions, and damaged evidence remain preserved and quarantined, with no relaxation of exact answer checks.
+- Adds the missing @emnapi/runtime 1.11.3 peer required by an optional WASM build branch, resolving rejection by newer npm versions. A regression check covers all required peers; existing dependency versions, URLs, and integrity values are preserved.
+- The Windows upgrade workflow installs locked dependencies before downloading or installing either app. Legacy probes are restricted to clean hosted Windows runners, verify the original file identity, and restart again after upgrade to confirm persistence. Ordinary local execution is rejected before launching an old app.
+- Reviews links, version context, and identity information in new current documents; adds the missing architecture-composition index; and distinguishes historical candidates, releases, and incomplete checks. Archived plans and model scans are not reclassified as pending work or physical calibration.
+- Retains the application ID, installer identity, user-data directory, and update repository, with the installer and complete update assets. Experiment behavior, state ownership, persistence, and exact answer checks match 6.4.1. Obsolete fits and downstream calculations from earlier piston versions still require recomputation.
+
 ## 6.4.1 — 2026-09-15
 
 - Both methods support Real/Ideal experiment conditions and air/helium. Ideal presets remove modeled environmental, observation, and loss disturbances while retaining manual operation, processing, and calculation. Incorrect operation still has physical consequences; Ideal provides diagnostics without numerical scores.

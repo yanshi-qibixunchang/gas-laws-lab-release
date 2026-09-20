@@ -10,7 +10,7 @@ This public release repository contains Windows installers, auto-update assets, 
 
 ## Download and installation
 
-The latest stable release is [`v6.4.1`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.1). Download `heat-capacity-lab-setup-6.4.1.exe` from Releases, verify that it came from this repository, and run it.
+The 6.4.2 candidate is undergoing Windows upgrade acceptance. The stable release remains [6.4.1](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.1).
 
 The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
@@ -20,11 +20,21 @@ Data written by the withdrawn experimental 5.1.2 build remains outside the compa
 
 Open **Help → About** and click **Check for Updates**. A stable update requires all three matching files in the same GitHub Release:
 
-- `heat-capacity-lab-setup-6.4.1.exe`
-- `heat-capacity-lab-setup-6.4.1.exe.blockmap`
+- `heat-capacity-lab-setup-6.4.2.exe`
+- `heat-capacity-lab-setup-6.4.2.exe.blockmap`
 - `latest.yml`
 
 If automatic update fails, download the latest installer and install it over the existing copy. An uninstall is not required unless a Release explicitly documents an incompatibility.
+
+## Patch changes in 6.4.2
+
+Version 6.4.2 restores supported older piston workspaces after upgrade, preserves raw experiment records, and invalidates obsolete fits and calculations under the current refitting rules. It also repairs clean dependency installation, strengthens Windows upgrade verification, and reviews development records. Experiment operation and exact checks based on displayed values are unchanged.
+
+- **Restore older piston experiment files**: Adds strict version migrations for older piston Free sessions and measurements so records still present in storage can appear again. Raw samples, frozen parameters, and valid period readings are retained in the experiment group; obsolete fits and downstream calculations require recomputation. Unknown fields, future versions, and damaged evidence remain preserved and quarantined, with no relaxation of exact answer checks.
+- **Repair clean dependency installation**: Adds the missing @emnapi/runtime 1.11.3 peer required by an optional WASM build branch, resolving rejection by newer npm versions. A regression check covers all required peers; existing dependency versions, URLs, and integrity values are preserved.
+- **Check dependencies before upgrade testing**: The Windows upgrade workflow installs locked dependencies before downloading or installing either app. Legacy probes are restricted to clean hosted Windows runners, verify the original file identity, and restart again after upgrade to confirm persistence. Ordinary local execution is rejected before launching an old app.
+- **Review development records and indexes**: Reviews links, version context, and identity information in new current documents; adds the missing architecture-composition index; and distinguishes historical candidates, releases, and incomplete checks. Archived plans and model scans are not reclassified as pending work or physical calibration.
+- **6.4.2 patch update and compatibility**: Retains the application ID, installer identity, user-data directory, and update repository, with the installer and complete update assets. Experiment behavior, state ownership, persistence, and exact answer checks match 6.4.1. Obsolete fits and downstream calculations from earlier piston versions still require recomputation.
 
 ## Highlights in 6.4.1
 
@@ -67,7 +77,9 @@ Standard Simulation provides hard-sphere molecular motion, realtime sampling, an
 - `docs/releases/release-notes.json`: structured trilingual notes used by the in-app update window.
 - GitHub Releases: installers, update metadata, and complete notes for each version.
 
-Version 6.4.1 passed strict TypeScript checks, all 346 automated test files, a production dependency audit with zero vulnerabilities, Windows installer and update-asset verification, and exact 6.4.0 → 6.4.1 differential reconstruction. Packaged workspace restoration, the fixed-port browser regression, and bundled PDF export were also checked.
+Version 6.4.2 passed strict TypeScript checks, all 349 automated test files, production and full dependency audits with zero vulnerabilities, clean dependency installation, a complete Windows build, and all three update-asset checks. Exact 6.4.1 → 6.4.2 differential reconstruction copied 74.9% of bytes. Four-file browser regression, mode changes, parameters, window history, and restoration passed; the packaged app retained a changed parameter after clean exit and relaunch.
+
+Final clean Windows upgrade results will be recorded in the Release. This candidate is not yet offered as a stable update.
 
 ## FAQ
 
@@ -78,7 +90,7 @@ The application ID, installer identity, user-data directory, and public update r
 This is the normal off state in the piston-oscillation experiment. Press the power control on the 3D instrument first.
 
 **What if auto update fails?**  
-Download the 6.4.1 installer from Releases and install it over the existing copy while retaining the user-data directory.
+Download the 6.4.2 installer from Releases and install it over the existing copy while retaining the user-data directory.
 
 **Why might Windows show a safety warning?**  
 Windows may warn about internet-downloaded installers that have not accumulated enough reputation. Verify the repository URL and Release file name before continuing.
