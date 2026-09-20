@@ -10,7 +10,7 @@ This public release repository contains Windows installers, auto-update assets, 
 
 ## Download and installation
 
-The 6.4.2 candidate is undergoing Windows upgrade acceptance. The stable release remains [6.4.1](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.1).
+The latest stable release is [`v6.4.2`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.2). Download `heat-capacity-lab-setup-6.4.2.exe` from Releases, verify that it came from this repository, and run it.
 
 The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
@@ -79,7 +79,7 @@ Standard Simulation provides hard-sphere molecular motion, realtime sampling, an
 
 Version 6.4.2 passed strict TypeScript checks, all 349 automated test files, production and full dependency audits with zero vulnerabilities, clean dependency installation, a complete Windows build, and all three update-asset checks. Exact 6.4.1 → 6.4.2 differential reconstruction copied 74.9% of bytes. Four-file browser regression, mode changes, parameters, window history, and restoration passed; the packaged app retained a changed parameter after clean exit and relaunch.
 
-Final clean Windows upgrade results will be recorded in the Release. This candidate is not yet offered as a stable update.
+Clean Windows 6.4.0 → 6.4.2 follow-up validation and 6.4.1 → 6.4.2 in-place upgrades both passed, including old-version relaunch, workspace and database restoration, differential reconstruction, and clean exit.
 
 ## FAQ
 
