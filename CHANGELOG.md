@@ -1,5 +1,14 @@
 # Changelog
 
+## 6.4.3
+
+- Three public voltage records feed correction, pressure, gamma, mean and Type A evaluation. The given 0.1 mV voltage standard uncertainty is propagated using a disclosed coefficient C and combined with Type A. Reports use combined standard uncertainty without an expansion factor. Revealed trial answers remain visible until manual navigation.
+- Adds mean T-squared and Sxx exercises before fit Type A, instrument Type B, combination and final rounding. Retains error-limit divided by square-root-three exercises for mass and diameter, discloses system propagation terms, and aligns formulas, precision and retry feedback.
+- Repairs the adiabatic third-trial save, process review and calculation handoff, with consistent manual and automatic zero records. Clips piston acquisition curves to the plot area and aligns experiment counters and next-group buttons vertically.
+- Unifies Chinese report headings, table alignment, typography and font sizes, with fully boxed axes, inward ticks, consistent colors and clear legends. Covers report, figure and CSV export paths and releases standard and ideal-gas plot canvases after export.
+- Restoration revalidates course dependencies and explicitly requests recomputation for missing exercises or obsolete rules while retaining raw records. Installer, update metadata and blockmap share one version, preserving application identity and the user-data location.
+
+
 ## 6.4.2 — 2026-09-20
 
 - Adds strict version migrations for older piston Free sessions and measurements so records still present in storage can appear again. Raw samples, frozen parameters, and valid period readings are retained in the experiment group; obsolete fits and downstream calculations require recomputation. Unknown fields, future versions, and damaged evidence remain preserved and quarantined, with no relaxation of exact answer checks.

@@ -8,6 +8,16 @@ Gas Laws Lab is a Windows desktop application for thermal and molecular-motion e
 
 This public release repository contains Windows installers, auto-update assets, and multilingual release notes. Reviewed, anonymized source history is published separately in [gas-laws-lab-history](https://github.com/yanshi-qibixunchang/gas-laws-lab-history); private research-report working material is outside that mirror.
 
+## Preparing 6.4.3
+
+Version 6.4.3 completes Free-mode uncertainty teaching for both heat-capacity experiments with consistent displayed values and exact answer checks. It repairs third-trial recording and calculation handoff, piston plot boundaries and answer feedback, and unifies Chinese reports and figure exports across all four experiments. Raw records are retained; incompatible calculations explicitly require recomputation.
+
+- **Adiabatic Type A, Type B and combined uncertainty**：Three public voltage records feed correction, pressure, gamma, mean and Type A evaluation. The given 0.1 mV voltage standard uncertainty is propagated using a disclosed coefficient C and combined with Type A. Reports use combined standard uncertainty without an expansion factor. Revealed trial answers remain visible until manual navigation.
+- **Stepwise piston uncertainty calculations**：Adds mean T-squared and Sxx exercises before fit Type A, instrument Type B, combination and final rounding. Retains error-limit divided by square-root-three exercises for mass and diameter, discloses system propagation terms, and aligns formulas, precision and retry feedback.
+- **Recording completion, progress and chart fixes**：Repairs the adiabatic third-trial save, process review and calculation handoff, with consistent manual and automatic zero records. Clips piston acquisition curves to the plot area and aligns experiment counters and next-group buttons vertically.
+- **Consistent reports and figures for four experiments**：Unifies Chinese report headings, table alignment, typography and font sizes, with fully boxed axes, inward ticks, consistent colors and clear legends. Covers report, figure and CSV export paths and releases standard and ideal-gas plot canvases after export.
+- **Save restoration and the 6.4.3 desktop update**：Restoration revalidates course dependencies and explicitly requests recomputation for missing exercises or obsolete rules while retaining raw records. Installer, update metadata and blockmap share one version, preserving application identity and the user-data location.
+
 ## Download and installation
 
 The latest stable release is [`v6.4.2`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.2). Download `heat-capacity-lab-setup-6.4.2.exe` from Releases, verify that it came from this repository, and run it.
