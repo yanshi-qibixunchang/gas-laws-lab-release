@@ -8,7 +8,7 @@
 
 本仓库是公开发行仓库，提供 Windows 安装包、自动更新资产和多语言版本说明。经过匿名处理的版本源码与逐提交历史发布在 [gas-laws-lab-history](https://github.com/yanshi-qibixunchang/gas-laws-lab-history)；研究报告工作材料不属于公开源码镜像。
 
-## 6.4.3 发行准备
+## 6.4.3 更新内容
 
 6.4.3 完善两类比热容比实验的自由模式不确定度教学，统一计算、显示与核验；修复绝热第三次实验记录和计算衔接、活塞曲线边界及答题反馈，并统一四类实验的中文报告和图表导出。旧原始记录保留，不兼容的计算进度会明确提示重算。
 
@@ -20,7 +20,7 @@
 
 ## 下载与安装
 
-当前最新稳定版为 [`v6.4.2`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.2)。请从 Releases 页面下载 `heat-capacity-lab-setup-6.4.2.exe`，确认来源为本仓库后运行安装。
+当前最新稳定版为 [`v6.4.3`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.3)。请从 Releases 页面下载 `heat-capacity-lab-setup-6.4.3.exe`，确认来源为本仓库后运行安装。
 
 继续沿用原应用 ID、安装身份、用户资料目录和公开更新仓库。旧活塞原始记录及有效周期读数保留；受旧舍入规则影响的拟合与下游计算会要求重新完成，不能复用过时答案。请在升级前备份重要实验。
 

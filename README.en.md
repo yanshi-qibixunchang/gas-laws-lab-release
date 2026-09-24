@@ -8,7 +8,7 @@ Gas Laws Lab is a Windows desktop application for thermal and molecular-motion e
 
 This public release repository contains Windows installers, auto-update assets, and multilingual release notes. Reviewed, anonymized source history is published separately in [gas-laws-lab-history](https://github.com/yanshi-qibixunchang/gas-laws-lab-history); private research-report working material is outside that mirror.
 
-## Preparing 6.4.3
+## What is new in 6.4.3
 
 Version 6.4.3 completes Free-mode uncertainty teaching for both heat-capacity experiments with consistent displayed values and exact answer checks. It repairs third-trial recording and calculation handoff, piston plot boundaries and answer feedback, and unifies Chinese reports and figure exports across all four experiments. Raw records are retained; incompatible calculations explicitly require recomputation.
 
@@ -20,7 +20,7 @@ Version 6.4.3 completes Free-mode uncertainty teaching for both heat-capacity ex
 
 ## Download and installation
 
-The latest stable release is [`v6.4.2`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.2). Download `heat-capacity-lab-setup-6.4.2.exe` from Releases, verify that it came from this repository, and run it.
+The latest stable release is [`v6.4.3`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.3). Download `heat-capacity-lab-setup-6.4.3.exe` from Releases, verify that it came from this repository, and run it.
 
 The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
