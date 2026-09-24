@@ -19,7 +19,7 @@
 
 ## 下载与安装
 
-当前候选版为 [`v6.4.4`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.4)。请从 Releases 页面下载 `heat-capacity-lab-setup-6.4.4.exe`，确认来源为本仓库后运行安装。
+当前最新稳定版为 [`v6.4.4`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.4)。请从 Releases 页面下载 `heat-capacity-lab-setup-6.4.4.exe`，确认来源为本仓库后运行安装。
 
 继续沿用原应用 ID、安装身份、用户资料目录和公开更新仓库。旧活塞原始记录及有效周期读数保留；受旧舍入规则影响的拟合与下游计算会要求重新完成，不能复用过时答案。请在升级前备份重要实验。
 
@@ -88,7 +88,7 @@
 
 6.4.4 已通过严格 TypeScript 检查、362 个自动化测试文件、生产依赖审计（0 项已知漏洞）、完整 NSIS 构建、打包内容一致性及三项更新资产校验。6.4.3 → 6.4.4 差分重构逐字节一致，复用 75.87% 的字节；5174 网页版下载和导出提示已核验。
 
-候选版已完成本地检查；干净 Windows 的 6.4.3 → 6.4.4 覆盖升级仍待验证，通过后再列为最新稳定版。
+干净 Windows 环境的 6.4.3 → 6.4.4 安装、覆盖升级、工作区恢复和升级后二次重启均通过。
 
 ## 常见问题
 

@@ -19,7 +19,7 @@
 
 ## 下載與安裝
 
-目前候選版為 [`v6.4.4`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.4)。請從 Releases 頁面下載 `heat-capacity-lab-setup-6.4.4.exe`，確認來源為本倉庫後執行安裝。
+目前最新穩定版為 [`v6.4.4`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.4)。請從 Releases 頁面下載 `heat-capacity-lab-setup-6.4.4.exe`，確認來源為本倉庫後執行安裝。
 
 繼續沿用原應用程式 ID、安裝身分、使用者資料目錄和公開更新倉庫。舊活塞原始記錄及有效週期讀數保留；受舊捨入規則影響的擬合與後續計算會要求重新完成，不能重用過時答案。請於升級前備份重要實驗。
 
@@ -88,7 +88,7 @@
 
 6.4.4 已通過嚴格 TypeScript 檢查、362 個自動化測試檔案、生產相依套件稽核（0 項已知漏洞）、完整 NSIS 建置、打包內容一致性及三項更新資產校驗。6.4.3 → 6.4.4 差分重構逐位元組一致，重用 75.87% 的位元組；5174 網頁版下載與匯出提示已核驗。
 
-候選版已完成本機檢查；乾淨 Windows 的 6.4.3 → 6.4.4 覆蓋升級仍待驗證，通過後再列為最新穩定版。
+乾淨 Windows 環境的 6.4.3 → 6.4.4 安裝、覆蓋升級、工作區還原與升級後再次重啟均通過。
 
 ## 常見問題
 
