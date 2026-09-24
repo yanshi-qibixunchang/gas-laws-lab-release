@@ -8,19 +8,18 @@ Gas Laws Lab is a Windows desktop application for thermal and molecular-motion e
 
 This public release repository contains Windows installers, auto-update assets, and multilingual release notes. Reviewed, anonymized source history is published separately in [gas-laws-lab-history](https://github.com/yanshi-qibixunchang/gas-laws-lab-history); private research-report working material is outside that mirror.
 
-## What is new in 6.4.3
+## What is new in 6.4.4
 
-Version 6.4.3 completes Free-mode uncertainty teaching for both heat-capacity experiments with consistent displayed values and exact answer checks. It repairs third-trial recording and calculation handoff, piston plot boundaries and answer feedback, and unifies Chinese reports and figure exports across all four experiments. Raw records are retained; incompatible calculations explicitly require recomputation.
+Version 6.4.4 improves the web experience with desktop download entries, clear desktop requirements for report, figure and table export, consistent messages in three languages, and an optional read-only experiment information tool. Desktop experiment models, calculations and storage formats follow 6.4.3.
 
-- **Adiabatic Type A, Type B and combined uncertainty**：Three public voltage records feed correction, pressure, gamma, mean and Type A evaluation. The given 0.1 mV voltage standard uncertainty is propagated using a disclosed coefficient C and combined with Type A. Reports use combined standard uncertainty without an expansion factor. Revealed trial answers remain visible until manual navigation.
-- **Stepwise piston uncertainty calculations**：Adds mean T-squared and Sxx exercises before fit Type A, instrument Type B, combination and final rounding. Retains error-limit divided by square-root-three exercises for mass and diameter, discloses system propagation terms, and aligns formulas, precision and retry feedback.
-- **Recording completion, progress and chart fixes**：Repairs the adiabatic third-trial save, process review and calculation handoff, with consistent manual and automatic zero records. Clips piston acquisition curves to the plot area and aligns experiment counters and next-group buttons vertically.
-- **Consistent reports and figures for four experiments**：Unifies Chinese report headings, table alignment, typography and font sizes, with fully boxed axes, inward ticks, consistent colors and clear legends. Covers report, figure and CSV export paths and releases standard and ideal-gas plot canvases after export.
-- **Save restoration and the 6.4.3 desktop update**：Restoration revalidates course dependencies and explicitly requests recomputation for missing exercises or obsolete rules while retaining raw records. Installer, update metadata and blockmap share one version, preserving application identity and the user-data location.
+- **Desktop download entry on the web**: Adds Windows desktop download entries to the web title bar and About window. Confirmation opens the 6.4.4 installer and explains that web and desktop progress are stored separately and are not transferred by downloading.
+- **Web export availability and environment messages**: Web report, figure and table export explains that the desktop app is required. About, export status and initial logs use consistent text in all three languages. Existing data-readiness checks remain, and tutorial access is checked before opening the adiabatic report-selection dialog.
+- **Read-only experiment information in supported browsers**: Browsers supporting the optional interface can read the experiment name, type and selected panel already shown in the UI. The read-only tool exposes no answers or hidden simulation values, starts no experiment and changes no learning progress. Other browsers continue to work normally.
+- **Desktop update 6.4.4 and compatibility**: Publishes matching Windows installer, blockmap and update metadata. The desktop app retains local export, update checks, application identity and its data directory. Experiment models, calculation formulas and storage formats follow 6.4.3.
 
 ## Download and installation
 
-The latest stable release is [`v6.4.3`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.3). Download `heat-capacity-lab-setup-6.4.3.exe` from Releases, verify that it came from this repository, and run it.
+The current candidate release is [`v6.4.4`](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.4.4). Download `heat-capacity-lab-setup-6.4.4.exe` from Releases, verify that it came from this repository, and run it.
 
 The application ID, installer identity, user-data directory, and public update repository remain unchanged. Historical piston raw records and valid period readings are retained; fits and downstream calculations affected by obsolete rounding rules must be recomputed. Back up important experiments before upgrading.
 
@@ -87,9 +86,9 @@ Standard Simulation provides hard-sphere molecular motion, realtime sampling, an
 - `docs/releases/release-notes.json`: structured trilingual notes used by the in-app update window.
 - GitHub Releases: installers, update metadata, and complete notes for each version.
 
-Version 6.4.2 passed strict TypeScript checks, all 349 automated test files, production and full dependency audits with zero vulnerabilities, clean dependency installation, a complete Windows build, and all three update-asset checks. Exact 6.4.1 → 6.4.2 differential reconstruction copied 74.9% of bytes. Four-file browser regression, mode changes, parameters, window history, and restoration passed; the packaged app retained a changed parameter after clean exit and relaunch.
+Version 6.4.4 passed strict TypeScript checks, all 362 automated test files, a production dependency audit with zero known vulnerabilities, the complete NSIS build, packaged-content checks and all three update-asset checks. Exact 6.4.3 to 6.4.4 differential reconstruction reused 75.87% of bytes. Web download and export prompts were verified on port 5174.
 
-Clean Windows 6.4.0 → 6.4.2 follow-up validation and 6.4.1 → 6.4.2 in-place upgrades both passed, including old-version relaunch, workspace and database restoration, differential reconstruction, and clean exit.
+The candidate has passed local checks. Clean Windows upgrade from 6.4.3 to 6.4.4 is still pending; it will become the latest stable release only after that validation passes.
 
 ## FAQ
 
@@ -100,7 +99,7 @@ The application ID, installer identity, user-data directory, and public update r
 This is the normal off state in the piston-oscillation experiment. Press the power control on the 3D instrument first.
 
 **What if auto update fails?**  
-Download the 6.4.2 installer from Releases and install it over the existing copy while retaining the user-data directory.
+Download the 6.4.4 installer from Releases and install it over the existing copy while retaining the user-data directory.
 
 **Why might Windows show a safety warning?**  
 Windows may warn about internet-downloaded installers that have not accumulated enough reputation. Verify the repository URL and Release file name before continuing.

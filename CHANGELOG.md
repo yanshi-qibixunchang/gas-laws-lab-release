@@ -1,5 +1,12 @@
 # Changelog
 
+## 6.4.4 — 2026-09-24
+
+- Adds Windows desktop download entries to the web title bar and About window. Confirmation opens the 6.4.4 installer and explains that web and desktop progress are stored separately and are not transferred by downloading.
+- Web report, figure and table export explains that the desktop app is required. About, export status and initial logs use consistent text in all three languages. Existing data-readiness checks remain, and tutorial access is checked before opening the adiabatic report-selection dialog.
+- Browsers supporting the optional interface can read the experiment name, type and selected panel already shown in the UI. The read-only tool exposes no answers or hidden simulation values, starts no experiment and changes no learning progress. Other browsers continue to work normally.
+- Publishes matching Windows installer, blockmap and update metadata. The desktop app retains local export, update checks, application identity and its data directory. Experiment models, calculation formulas and storage formats follow 6.4.3.
+
 ## 6.4.3
 
 - Three public voltage records feed correction, pressure, gamma, mean and Type A evaluation. The given 0.1 mV voltage standard uncertainty is propagated using a disclosed coefficient C and combined with Type A. Reports use combined standard uncertainty without an expansion factor. Revealed trial answers remain visible until manual navigation.
