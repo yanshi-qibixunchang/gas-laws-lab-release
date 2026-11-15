@@ -1,5 +1,20 @@
 # Changelog
 
+## 6.5.0 — 2026-11-15
+
+- Both heat-capacity experiments use accepted ideal and realistic air/helium profiles checked against predefined conditions. Piston calculations use the loaded equilibrium gas pressure.
+- The ideal piston model includes energy-conserving internal dissipation with acquisition up to 3 seconds. Realistic profiles retain calibrated losses. Large release-time differences no longer saturate at the former cap; normal operation tolerance remains. Event sound duration follows motion, with literature and audio provenance recorded.
+- Experiment names are unique across all types and both open and closed files, with numbered suffixes for conflicts. Legacy duplicate names are repaired on load without changing experiment data. Adiabatic molecular visualization shows a continuous temperature legend below its toggle, using the actual particle color mapping and Celsius endpoints.
+- Adiabatic expansion free mode accepts integer trial counts of at least 3, with common dropdown choices. Acquisition, aggregate calculations and uncertainty use the actual count, which survives saving and reopening. Existing groups retain their calculation progress.
+- Aligns formulas, full variable names and hover help, with concise final results. Next-step, accepted-answer and reference-answer actions focus and reveal the next question; retry returns to the current input. Fixes outer-frame scrolling and clipped dialogs in scaled windows.
+- Removes the superseded third-party platform-vibration fallback and its source entry. The two project-provided rebound recordings are listed as project-owned assets. Other active third-party sounds retain attribution and licenses; bundled dependency and provenance notices are regenerated.
+- Desktop startup reports the actual export environment instead of an unconditional missing-bridge warning. Removes duplicate demo-completion messages.
+- Both heat-capacity visualization switches use the same arrow-free help panel. Hovering for one second slides and fades it in; leaving immediately starts the matching exit motion. Mouse-click focus no longer pins help open, and keyboard-focus help remains. Superseded switch-specific tooltip logic is removed.
+- Reduces repeated reference simulation and full-text comparisons while saving completed adiabatic experiments, preventing exit-save timeouts in larger workspaces. Raw curves, parameters, results and read-back integrity remain checked. Save formats and historical experiment data are unchanged.
+- Fixes sample-rate and falling-trigger inputs becoming unavailable after a setup bottom impact. Acquisition settings remain editable before acquisition starts, including in restored experiments. Once acquisition begins, group settings and existing data remain protected.
+- Fixes valid ideal air and helium curves from the internal-dissipation model being rejected by the previous save check. Accepted curves advance to the next measurement; failed saves no longer display success. Existing frozen curves remain saveable and historical measurements are preserved.
+- Retains the application identity, installation location, user-data directory, historical snapshots and compatibility readers. The release repository provides the Windows installer, blockmap and update manifest. Users on 6.4.4 can check for updates or install the full package over their existing installation. Users of a local 6.5.0 candidate need to install the stable package manually because the version number is unchanged.
+
 ## 6.4.4 — 2026-09-24
 
 - Adds Windows desktop download entries to the web title bar and About window. Confirmation opens the 6.4.4 installer and explains that web and desktop progress are stored separately and are not transferred by downloading.

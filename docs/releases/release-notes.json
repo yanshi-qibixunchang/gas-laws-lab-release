@@ -3,6 +3,210 @@
   "app": "hard-sphere-lab",
   "releases": [
     {
+      "version": "6.5.0",
+      "date": "2026-11-15",
+      "channel": "stable",
+      "download": {
+        "releasePage": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.0",
+        "windowsInstaller": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.0/heat-capacity-lab-setup-6.5.0.exe"
+      },
+      "summary": {
+        "zh-CN": "6.5.0 正式版完善空气与氦气的理想、真实实验模型，加入活塞内部耗散和现场录音拟合音效，统一计算教学与可视化提示。修复采集设置、连续测量及较大工作区保存问题，支持自由实验次数设置、文件名自动避重和温度色条，并保留旧实验的历史参数与数据。",
+        "zh-TW": "6.5.0 正式版完善空氣與氦氣的理想、真實實驗模型，加入活塞內部耗散及現場錄音擬合音效，統一計算教學與視覺化提示。修正採集設定、連續測量及較大工作區儲存問題，支援自由實驗次數設定、檔名自動避重及溫度色條，並保留舊實驗的歷史參數與資料。",
+        "en": "Version 6.5.0 refines ideal and realistic air/helium experiments, adds piston internal dissipation and recording-based sound, and unifies calculation teaching and visualization help. It fixes acquisition settings, consecutive measurements and larger-workspace saves, adds flexible trial counts, unique file names and a temperature legend, and preserves historical experiment parameters and data."
+      },
+      "sections": [
+        {
+          "type": "improved",
+          "title": {
+            "zh-CN": "实验模型与计算体验",
+            "zh-TW": "實驗模型與計算體驗",
+            "en": "Experiment models and calculation workflow"
+          },
+          "items": [
+            {
+              "scope": "heat-capacity-calibrated-gas-profiles",
+              "importance": "high",
+              "title": {
+                "zh-CN": "空气与氦气工况标定",
+                "zh-TW": "空氣與氦氣工況標定",
+                "en": "Calibrated air and helium conditions"
+              },
+              "body": {
+                "zh-CN": "两种比热容比实验分别采用已确认的空气、氦气理想与真实参数，按预先设定的工况区间验证；活塞计算采用缸内平衡压强。",
+                "zh-TW": "兩種比熱容比實驗分別採用已確認的空氣、氦氣理想與真實參數，依預先設定的工況區間驗證；活塞計算採用缸內平衡壓強。",
+                "en": "Both heat-capacity experiments use accepted ideal and realistic air/helium profiles checked against predefined conditions. Piston calculations use the loaded equilibrium gas pressure."
+              }
+            },
+            {
+              "scope": "piston-internal-dissipation",
+              "importance": "high",
+              "title": {
+                "zh-CN": "耗散、振动与声音",
+                "zh-TW": "耗散、振動與聲音",
+                "en": "Dissipation, oscillation and sound"
+              },
+              "body": {
+                "zh-CN": "理想活塞模型加入能量守恒的内部耗散，采集上限提高至 3 秒；真实模型保留已标定损耗。取消大松手时间差的损耗上限，保留正常操作容差。振动声音随事件持续时间变化，文献和音频来源已记录。",
+                "zh-TW": "理想活塞模型加入能量守恆的內部耗散，採集上限提高至 3 秒；真實模型保留已標定損耗。取消大鬆手時間差的損耗上限，保留正常操作容差。振動聲音隨事件持續時間變化，文獻及音訊來源已記錄。",
+                "en": "The ideal piston model includes energy-conserving internal dissipation with acquisition up to 3 seconds. Realistic profiles retain calibrated losses. Large release-time differences no longer saturate at the former cap; normal operation tolerance remains. Event sound duration follows motion, with literature and audio provenance recorded."
+              }
+            },
+            {
+              "scope": "global-file-names-temperature-legend",
+              "importance": "medium",
+              "title": {
+                "zh-CN": "文件名自动避重与温度色条",
+                "zh-TW": "檔案名稱自動避重與溫度色條",
+                "en": "Unique file names and temperature legend"
+              },
+              "body": {
+                "zh-CN": "所有实验类型共用唯一名称规则，重名自动补充 (1)、(2) 等编号；已关闭文件也参与检查。旧文件加载时仅整理重名，不改实验数据。绝热膨胀法开启微观可视化后，开关下方显示连续温度渐变及两端摄氏温度，与分子颜色映射保持一致。",
+                "zh-TW": "所有實驗類型共用唯一名稱規則，重名自動補上 (1)、(2) 等編號；已關閉檔案也參與檢查。舊檔案載入時僅整理重名，不改實驗資料。絕熱膨脹法開啟微觀可視化後，開關下方顯示連續溫度漸變及兩端攝氏溫度，與分子顏色映射保持一致。",
+                "en": "Experiment names are unique across all types and both open and closed files, with numbered suffixes for conflicts. Legacy duplicate names are repaired on load without changing experiment data. Adiabatic molecular visualization shows a continuous temperature legend below its toggle, using the actual particle color mapping and Celsius endpoints."
+              }
+            },
+            {
+              "scope": "adiabatic-free-trial-count",
+              "importance": "medium",
+              "title": {
+                "zh-CN": "自由实验次数可输入和选择",
+                "zh-TW": "自由實驗次數可輸入和選擇",
+                "en": "Flexible free-mode trial counts"
+              },
+              "body": {
+                "zh-CN": "绝热膨胀法自由模式支持输入至少 3 次的整数，并提供常用次数下拉选项。采集进度、汇总及不确定度计算按实际次数处理，保存恢复保留所选次数；旧组保留原有计算进度。",
+                "zh-TW": "絕熱膨脹法自由模式支援輸入至少 3 次的整數，並提供常用次數下拉選項。採集進度、彙總及不確定度計算依實際次數處理，儲存還原保留所選次數；舊組保留原有計算進度。",
+                "en": "Adiabatic expansion free mode accepts integer trial counts of at least 3, with common dropdown choices. Acquisition, aggregate calculations and uncertainty use the actual count, which survives saving and reopening. Existing groups retain their calculation progress."
+              }
+            },
+            {
+              "scope": "calculation-focus-and-explanations",
+              "importance": "high",
+              "title": {
+                "zh-CN": "计算与不确定度交互",
+                "zh-TW": "計算與不確定度互動",
+                "en": "Calculation and uncertainty interaction"
+              },
+              "body": {
+                "zh-CN": "统一公式、变量全称和悬浮提示，简化最终结果框；继续下一项、正确作答或查看参考答案后自动聚焦并滚动到下一题，重做时返回当前题。修复缩放窗口中的外框滚动和弹窗越界。",
+                "zh-TW": "統一公式、變數全稱及懸浮提示，簡化最終結果框；繼續下一項、正確作答或查看參考答案後自動聚焦並捲動至下一題，重做時返回目前題目。修正縮放視窗中的外框捲動與彈窗越界。",
+                "en": "Aligns formulas, full variable names and hover help, with concise final results. Next-step, accepted-answer and reference-answer actions focus and reveal the next question; retry returns to the current input. Fixes outer-frame scrolling and clipped dialogs in scaled windows."
+              }
+            },
+            {
+              "scope": "audio-provenance-cleanup",
+              "importance": "normal",
+              "title": {
+                "zh-CN": "音效来源与许可清单",
+                "zh-TW": "音效來源與授權清單",
+                "en": "Audio provenance and license inventory"
+              },
+              "body": {
+                "zh-CN": "移除已被现场录音替代的旧平台振动备用音及对应来源登记。两段项目提供的回弹录音列为自有素材，其他仍在使用的第三方音效保留原署名和许可；重新生成随软件分发的完整依赖与来源清单。",
+                "zh-TW": "移除已被現場錄音取代的舊平台振動備用音及對應來源登記。兩段專案提供的回彈錄音列為自有素材，其他仍使用的第三方音效保留原署名與授權；重新產生隨軟體分發的完整相依套件與來源清單。",
+                "en": "Removes the superseded third-party platform-vibration fallback and its source entry. The two project-provided rebound recordings are listed as project-owned assets. Other active third-party sounds retain attribution and licenses; bundled dependency and provenance notices are regenerated."
+              }
+            }
+          ]
+        },
+        {
+          "type": "fixed",
+          "title": {
+            "zh-CN": "桌面验收与旧数据兼容",
+            "zh-TW": "桌面驗收與舊資料相容",
+            "en": "Desktop validation and historical data"
+          },
+          "items": [
+            {
+              "scope": "desktop-export-status",
+              "importance": "normal",
+              "title": {
+                "zh-CN": "导出环境提示",
+                "zh-TW": "匯出環境提示",
+                "en": "Export environment messages"
+              },
+              "body": {
+                "zh-CN": "桌面启动后按真实检测结果提示导出环境，避免提前显示缺少桌面支持的误报；消除演示结束时重复的完成消息。",
+                "zh-TW": "桌面啟動後依實際檢測結果提示匯出環境，避免提前顯示缺少桌面支援的誤報；消除演示結束時重複的完成訊息。",
+                "en": "Desktop startup reports the actual export environment instead of an unconditional missing-bridge warning. Removes duplicate demo-completion messages."
+              }
+            },
+            {
+              "scope": "visualization-switch-hover-help",
+              "importance": "normal",
+              "title": {
+                "zh-CN": "可视化开关悬浮提示",
+                "zh-TW": "視覺化開關懸浮提示",
+                "en": "Visualization switch hover help"
+              },
+              "body": {
+                "zh-CN": "两种比热容比实验的左上角可视化开关统一使用无尖角说明面板。鼠标停留 1 秒后滑入并淡入，移出后立即开始滑出并淡出；点击后不再因残留焦点持续显示，保留键盘聚焦提示。清理被替代的专用提示分支。",
+                "zh-TW": "兩種比熱容比實驗的左上角視覺化開關統一使用無尖角說明面板。滑鼠停留 1 秒後滑入並淡入，移出後立即開始滑出並淡出；點擊後不再因殘留焦點持續顯示，保留鍵盤聚焦提示。清理已被替代的專用提示分支。",
+                "en": "Both heat-capacity visualization switches use the same arrow-free help panel. Hovering for one second slides and fades it in; leaving immediately starts the matching exit motion. Mouse-click focus no longer pins help open, and keyboard-focus help remains. Superseded switch-specific tooltip logic is removed."
+              }
+            },
+            {
+              "scope": "workspace-save-large-experiments",
+              "importance": "high",
+              "title": {
+                "zh-CN": "多次实验后的保存与退出",
+                "zh-TW": "多次實驗後的儲存與結束",
+                "en": "Saving and closing larger experiment workspaces"
+              },
+              "body": {
+                "zh-CN": "减少绝热膨胀法已完成实验在保存时重复生成参考曲线、重复构造完整比较文本的开销，避免较大工作区退出保存超时。继续核验原始曲线、参数与计算结果，并保留写入后的完整性检查；存档格式和历史实验数据不变。",
+                "zh-TW": "減少絕熱膨脹法已完成實驗在儲存時重複產生參考曲線、重複建立完整比較文字的負擔，避免較大工作區結束儲存逾時。繼續核驗原始曲線、參數與計算結果，並保留寫入後的完整性檢查；存檔格式及歷史實驗資料不變。",
+                "en": "Reduces repeated reference simulation and full-text comparisons while saving completed adiabatic experiments, preventing exit-save timeouts in larger workspaces. Raw curves, parameters, results and read-back integrity remain checked. Save formats and historical experiment data are unchanged."
+              }
+            },
+            {
+              "scope": "piston-acquisition-input-lock",
+              "importance": "high",
+              "title": {
+                "zh-CN": "采集设置提前锁定",
+                "zh-TW": "採集設定提前鎖定",
+                "en": "Premature acquisition-input locking"
+              },
+              "body": {
+                "zh-CN": "修复活塞在准备阶段触底后，采样频率和下降触发阈值无法继续填写的问题。开始采集前仍可调整采集设置，兼容此前已触底但尚未采集的旧实验；开始采集后继续保护本组参数和已有数据。",
+                "zh-TW": "修正活塞在準備階段觸底後，取樣頻率及下降觸發閾值無法繼續填寫的問題。開始採集前仍可調整採集設定，相容先前已觸底但尚未採集的舊實驗；開始採集後繼續保護本組參數及既有資料。",
+                "en": "Fixes sample-rate and falling-trigger inputs becoming unavailable after a setup bottom impact. Acquisition settings remain editable before acquisition starts, including in restored experiments. Once acquisition begins, group settings and existing data remain protected."
+              }
+            },
+            {
+              "scope": "piston-ideal-measurement-save",
+              "importance": "high",
+              "title": {
+                "zh-CN": "理想活塞曲线保存与连续测量",
+                "zh-TW": "理想活塞曲線儲存與連續測量",
+                "en": "Ideal piston curve saving and consecutive measurements"
+              },
+              "body": {
+                "zh-CN": "修复理想空气和理想氦气的新耗散模型曲线被旧保存检查拒绝、无法进入下一次测量的问题。保存提示以实际接受结果为准；此前冻结的有效曲线可继续保存，已有实验数据保持不变。",
+                "zh-TW": "修正理想空氣及理想氦氣的新耗散模型曲線被舊儲存檢查拒絕、無法進入下一次測量的問題。儲存提示依實際接受結果顯示；先前凍結的有效曲線可繼續儲存，既有實驗資料保持不變。",
+                "en": "Fixes valid ideal air and helium curves from the internal-dissipation model being rejected by the previous save check. Accepted curves advance to the next measurement; failed saves no longer display success. Existing frozen curves remain saveable and historical measurements are preserved."
+              }
+            },
+            {
+              "scope": "desktop-update-v6-5-0",
+              "importance": "high",
+              "title": {
+                "zh-CN": "6.5.0 正式更新与旧数据兼容",
+                "zh-TW": "6.5.0 正式更新與舊資料相容",
+                "en": "6.5.0 stable update and existing data"
+              },
+              "body": {
+                "zh-CN": "沿用应用标识、安装目录和用户资料目录，保留旧实验快照与兼容读取。通过正式发布仓库提供 Windows 完整安装包、差分文件及更新清单；6.4.4 用户可检查更新或下载完整安装包覆盖安装。已安装同版本 6.5.0 本地候选的用户需下载正式安装包手动覆盖。",
+                "zh-TW": "沿用應用識別、安裝目錄及使用者資料目錄，保留舊實驗快照與相容讀取。透過正式發佈倉庫提供 Windows 完整安裝程式、差分檔及更新清單；6.4.4 使用者可檢查更新或下載完整安裝程式覆蓋安裝。已安裝同版本 6.5.0 本地候選的使用者須下載正式安裝程式手動覆蓋。",
+                "en": "Retains the application identity, installation location, user-data directory, historical snapshots and compatibility readers. The release repository provides the Windows installer, blockmap and update manifest. Users on 6.4.4 can check for updates or install the full package over their existing installation. Users of a local 6.5.0 candidate need to install the stable package manually because the version number is unchanged."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "version": "6.4.4",
       "date": "2026-09-24",
       "channel": "stable",
