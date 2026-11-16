@@ -3,6 +3,252 @@
   "app": "hard-sphere-lab",
   "releases": [
     {
+      "version": "6.5.3",
+      "date": "2026-11-17",
+      "channel": "stable",
+      "download": {
+        "releasePage": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.3",
+        "windowsInstaller": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.3/heat-capacity-lab-setup-6.5.3.exe"
+      },
+      "summary": {
+        "zh-CN": "6.5.3 更新真实空气与氦气的活塞耗散、换热和观测参数，保留历史实验及两种体积计算流程。",
+        "zh-TW": "6.5.3 更新真實空氣與氦氣的活塞耗散、換熱與觀測參數，保留歷史實驗及兩種體積計算流程。",
+        "en": "6.5.3 updates realistic-air and helium piston dissipation, heat-transfer and observation presets while preserving historical experiments and both volume calculation workflows."
+      },
+      "sections": [
+        {
+          "type": "improved",
+          "title": {
+            "zh-CN": "本次更新",
+            "zh-TW": "本次更新",
+            "en": "Changes"
+          },
+          "items": [
+            {
+              "scope": "real-piston-dissipation",
+              "importance": "high",
+              "title": {
+                "zh-CN": "真实模式接入内部耗散",
+                "zh-TW": "真實模式接入內部耗散",
+                "en": "Internal dissipation in realistic piston experiments"
+              },
+              "body": {
+                "zh-CN": "真实空气与氦气采用动态压强内部耗散，并将同一耗散功率计入气体内能，同时保留对外换热。重新设置剩余机械损耗、换热、传感器响应和尾段扰动；两种气体的启用参数均为非零值。",
+                "zh-TW": "真實空氣與氦氣採用動態壓強內部耗散，並將同一耗散功率計入氣體內能，同時保留對外換熱。重新設定剩餘機械損耗、換熱、感測器響應及尾段擾動；兩種氣體的啟用參數均為非零值。",
+                "en": "Realistic air and helium now include dynamic-pressure internal dissipation and matching gas heating alongside external heat transfer. Residual mechanical loss, thermal response, sensor response and tail disturbance presets are updated with nonzero active coefficients."
+              }
+            },
+            {
+              "scope": "profile-history",
+              "importance": "high",
+              "title": {
+                "zh-CN": "保留历史实验",
+                "zh-TW": "保留歷史實驗",
+                "en": "Preserve historical experiments"
+              },
+              "body": {
+                "zh-CN": "新建、完整重置或恢复默认参数后使用新配置；旧实验继续使用原模型版本、参数快照和记录。已知总体积单次计算及未知体积多高度计算流程保持兼容，第三方依赖版本不变。",
+                "zh-TW": "新建、完整重設或恢復預設參數後使用新設定；舊實驗繼續使用原模型版本、參數快照及記錄。已知總體積單次計算與未知體積多高度計算流程保持相容，第三方依賴版本不變。",
+                "en": "New experiments, full resets and restored defaults use the new profiles. Historical experiments retain their model versions, parameter snapshots and records. Known-volume and multi-height calculations remain compatible; third-party dependency versions are unchanged."
+              }
+            },
+            {
+              "scope": "validation-boundaries",
+              "importance": "normal",
+              "title": {
+                "zh-CN": "核验结果与适用边界",
+                "zh-TW": "核驗結果與適用邊界",
+                "en": "Validation results and limits"
+              },
+              "body": {
+                "zh-CN": "固定空气主图前 100 ms 的波形 R² 为 0.9589，但首峰和包络偏差仍超限，留出曲线仅 4/16 条同时满足四项门槛。空气五类工况通过；氦气最佳操作原批次有 3 个连续三次均值窗口超限，且尚无实测波形验证。本版采用经确认的教学参数，不宣称完成全面仪器标定。",
+                "zh-TW": "固定空氣主圖前 100 ms 的波形 R² 為 0.9589，但首峰及包絡偏差仍超限，留出曲線僅 4/16 條同時滿足四項門檻。空氣五類工況通過；氦氣最佳操作原批次有 3 個連續三次均值視窗超限，且尚無實測波形驗證。本版採用經確認的教學參數，不宣稱完成全面儀器標定。",
+                "en": "The fixed air comparison reaches waveform R² = 0.9589 over the first 100 ms, but peak and envelope errors remain above their limits; 4 of 16 held-out curves pass all four gates. Air passes the five operating conditions. The original helium batch has three failing rolling three-trial means and no measured waveform validation. These are accepted teaching presets, not a claim of complete apparatus calibration."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": "6.5.2",
+      "date": "2026-11-16",
+      "channel": "stable",
+      "download": {
+        "releasePage": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.2",
+        "windowsInstaller": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.2/heat-capacity-lab-setup-6.5.2.exe"
+      },
+      "summary": {
+        "zh-CN": "6.5.2 新增真实空气的已知总体积单次活塞实验，调整自由模式计划顺序与体积下拉框，并将真实空气默认记录时间改为 0.5 秒。保留旧实验数据及物理参数配置。",
+        "zh-TW": "6.5.2 新增真實空氣的已知總體積單次活塞實驗，調整自由模式計畫順序及體積下拉選單，並將真實空氣預設記錄時間改為 0.5 秒。保留舊實驗資料及物理參數配置。",
+        "en": "6.5.2 adds a single piston trial with known total volume for realistic air, improves Free-mode plan setup and the volume dropdown, and changes the realistic-air default duration to 0.5 s. Historical data and physical profiles are preserved."
+      },
+      "sections": [
+        {
+          "type": "improved",
+          "title": {
+            "zh-CN": "本次新增与改进",
+            "zh-TW": "本次新增與改進",
+            "en": "New features and improvements"
+          },
+          "items": [
+            {
+              "scope": "known-volume-direct",
+              "importance": "high",
+              "title": {
+                "zh-CN": "已知总体积单次实验",
+                "zh-TW": "已知總體積單次實驗",
+                "en": "Single trial with known total volume"
+              },
+              "body": {
+                "zh-CN": "活塞自由模式新增“未知体积／已知体积”。已知体积限真实空气，固定一次、目标高度 50 mm；使用该次保存的加载平衡总体积、同状态压力和实测周期，直接计算面积、比热容比及相对误差，不经过拟合或不确定度计算。",
+                "zh-TW": "活塞自由模式新增「未知體積／已知體積」。已知體積限真實空氣，固定一次、目標高度 50 mm；使用該次儲存的加載平衡總體積、同狀態壓力及實測週期，直接計算面積、比熱容比及相對誤差，不經過擬合或不確定度計算。",
+                "en": "Piston Free mode adds unknown/known volume conditions. Known volume is available for realistic air only, with one trial at a 50 mm target. The saved loaded-equilibrium volume, pressure at that state and measured period determine area, heat-capacity ratio and relative error directly, without fitting or uncertainty steps."
+              }
+            },
+            {
+              "scope": "free-plan-and-volume-control",
+              "importance": "high",
+              "title": {
+                "zh-CN": "先调参，再建立计划",
+                "zh-TW": "先調參，再建立計畫",
+                "en": "Adjust parameters before creating a plan"
+              },
+              "body": {
+                "zh-CN": "首次进入自由模式先展开参数栏，再由三维视图内现有按钮确认计划。未知体积保留 3–6 次、多高度流程；已知体积显示固定计划确认窗。无计划且参数栏展开时，闲置 10 秒提示计划入口；体积下拉框统一字号、尺寸及键盘交互。",
+                "zh-TW": "首次進入自由模式先展開參數欄，再由三維視圖內既有按鈕確認計畫。未知體積保留 3–6 次、多高度流程；已知體積顯示固定計畫確認窗。無計畫且參數欄展開時，閒置 10 秒提示計畫入口；體積下拉選單統一字級、尺寸及鍵盤互動。",
+                "en": "Free mode opens the parameter sidebar before plan creation using the existing apparatus-view button. Unknown volume keeps 3–6 trials at multiple heights; known volume uses a fixed-plan confirmation. After 10 idle seconds with the sidebar open and no plan, the plan button is highlighted. The volume dropdown follows the shared typography, sizing and keyboard behavior."
+              }
+            },
+            {
+              "scope": "real-air-duration",
+              "importance": "high",
+              "title": {
+                "zh-CN": "真实空气默认记录 0.5 秒",
+                "zh-TW": "真實空氣預設記錄 0.5 秒",
+                "en": "Realistic-air default recording: 0.5 seconds"
+              },
+              "body": {
+                "zh-CN": "真实空气自由实验的新建、完整重置及恢复默认参数采用 0.5 s，原为 1.2 s。保留旧存档、明确设置和冻结快照中的时长；理想条件、氦气及演示／引导流程不变。物理参数配置沿用 6.5.0。",
+                "zh-TW": "真實空氣自由實驗的新建、完整重設及恢復預設參數採用 0.5 s，原為 1.2 s。保留舊存檔、明確設定及凍結快照中的時長；理想條件、氦氣及演示／引導流程不變。物理參數配置沿用 6.5.0。",
+                "en": "New, fully reset and default-restored realistic-air Free experiments use 0.5 s instead of 1.2 s. Existing saves, explicit settings and frozen snapshots retain their durations. Ideal conditions, helium and Demo/Guide flows keep their behavior. Physical profiles remain unchanged from 6.5.0."
+              }
+            },
+            {
+              "scope": "direct-results-and-provenance",
+              "importance": "high",
+              "title": {
+                "zh-CN": "保存、回顾与导出",
+                "zh-TW": "儲存、回顧及匯出",
+                "en": "Persistence, review and export"
+              },
+              "body": {
+                "zh-CN": "单次方法保存来源记录及总体积快照，重做后同步更新并使旧周期与答案失效。计算显示、答案校验与导出共用显示值；过程回顾使用总体积和周期，不因缺少拟合扣分。报告及数据表按方法输出公式与来源，三语说明与第三方清单同步更新。两种方法通过相对误差比较，不预设单次实验更准确。",
+                "zh-TW": "單次方法儲存來源記錄及總體積快照，重做後同步更新並使舊週期與答案失效。計算顯示、答案驗證及匯出共用顯示值；過程回顧使用總體積及週期，不因缺少擬合扣分。報告與資料表依方法輸出公式及來源，三語說明與第三方清單同步更新。兩種方法透過相對誤差比較，不預設單次實驗更準確。",
+                "en": "The direct method retains its source measurement and volume snapshot; remeasurement refreshes them and invalidates old periods and answers. Displayed values drive validation and exports. Review shows volume and period without penalizing absent fitting. Reports and tables include method-specific formulas and provenance. Three-language documentation and third-party inventories are updated. Compare methods by relative error; a single trial is not assumed more accurate."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": "6.5.1",
+      "date": "2026-11-16",
+      "channel": "stable",
+      "download": {
+        "releasePage": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.1",
+        "windowsInstaller": "https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.1/heat-capacity-lab-setup-6.5.1.exe"
+      },
+      "summary": {
+        "zh-CN": "6.5.1 修复实验保存、关闭与采集状态，新增可拖动科学计算器和过程回顾自动入口，完善活塞操作、框选及提示排版。沿用 6.5.0 物理参数，保留旧实验记录。",
+        "zh-TW": "6.5.1 修正實驗儲存、關閉與採集狀態，新增可拖動科學計算機及過程回顧自動入口，完善活塞操作、框選與提示排版。沿用 6.5.0 物理參數，保留舊實驗記錄。",
+        "en": "6.5.1 fixes experiment saving, closing and acquisition status, adds a draggable scientific calculator and automatic process review, and improves piston interaction, selection and notices. Physical profiles remain unchanged from 6.5.0 and saved records are preserved."
+      },
+      "sections": [
+        {
+          "type": "improved",
+          "title": {
+            "zh-CN": "本次改进与修复",
+            "zh-TW": "本次改進與修正",
+            "en": "Improvements and fixes"
+          },
+          "items": [
+            {
+              "scope": "workspace-save-close",
+              "importance": "high",
+              "title": {
+                "zh-CN": "保存、关闭与删除",
+                "zh-TW": "儲存、關閉與刪除",
+                "en": "Saving, closing and deleting"
+              },
+              "body": {
+                "zh-CN": "修复关闭或删除实验时的保存冲突，以及零斜率练习数据导致的保存失败。保存警告可点击外部收起，新失败仍会提示；原始曲线和答题记录继续保留。",
+                "zh-TW": "修正關閉或刪除實驗時的儲存衝突，以及零斜率練習資料導致的儲存失敗。儲存警告可點擊外部收起，新失敗仍會提示；原始曲線與答題記錄繼續保留。",
+                "en": "Fixes save conflicts when closing or deleting experiments and save failures from zero-slope practice fits. Save alerts dismiss on outside clicks and reappear for new failures; raw curves and answer records are retained."
+              }
+            },
+            {
+              "scope": "scientific-calculator-review",
+              "importance": "high",
+              "title": {
+                "zh-CN": "计算器与过程回顾",
+                "zh-TW": "計算機與過程回顧",
+                "en": "Scientific calculator and process review"
+              },
+              "body": {
+                "zh-CN": "两种比热容比计算窗口新增可拖动计算器，支持平方、开方、乘方、对数和科学计数法。自由实验计算完成并关闭计算窗口后自动打开过程回顾，入口介绍全软件只提示一次。",
+                "zh-TW": "兩種比熱容比計算視窗新增可拖動計算機，支援平方、開方、乘方、對數及科學記號。自由實驗計算完成並關閉計算視窗後自動開啟過程回顧，入口介紹全軟體只提示一次。",
+                "en": "Both heat-capacity calculation windows include a draggable calculator with powers, roots, logarithms and scientific notation. Completing Free-mode calculations opens process review after the calculation window closes, with one app-wide introduction to its entry."
+              }
+            },
+            {
+              "scope": "acquisition-progress",
+              "importance": "high",
+              "title": {
+                "zh-CN": "采集状态与记录回看",
+                "zh-TW": "採集狀態與記錄回看",
+                "en": "Acquisition progress and saved curves"
+              },
+              "body": {
+                "zh-CN": "全部活塞记录保存后保留最后曲线，显示本组采集已完成；补测、重开和文件切换同步更新。两种方法明确区分采集完成与计算完成，修正底部状态提示。",
+                "zh-TW": "全部活塞記錄儲存後保留最後曲線，顯示本組採集已完成；補測、重開及檔案切換同步更新。兩種方法明確區分採集完成與計算完成，修正底部狀態提示。",
+                "en": "Completed piston acquisition retains the last saved curve and updates consistently for replacement trials, reopening and file switching. Both methods distinguish acquisition completion from calculation completion and show accurate status-bar text."
+              }
+            },
+            {
+              "scope": "piston-interaction",
+              "importance": "high",
+              "title": {
+                "zh-CN": "模型连接、下沉与教学高度",
+                "zh-TW": "模型連接、下沉與教學高度",
+                "en": "Apparatus connection, settling and teaching heights"
+              },
+              "body": {
+                "zh-CN": "修正顶板与支架连接，锁紧后松手不再提前触发下沉。密封、松开螺钉并解除手部支撑后才进入承重平衡。新演示和引导方案使用 70、60、50 mm，旧方案按原记录恢复；物理参数配置不变。",
+                "zh-TW": "修正頂板與支架連接，鎖緊後鬆手不再提前觸發下沉。密封、鬆開螺釘並解除手部支撐後才進入承重平衡。新演示與引導方案採用 70、60、50 mm，舊方案依原記錄恢復；物理參數配置不變。",
+                "en": "Fixes the top-plate support connection and prevents premature settling after releasing a locked piston. Load equilibrium begins after sealing, unlocking and removing hand support. New Demo/Guide plans use 70, 60 and 50 mm; saved plans and physical parameter profiles are preserved."
+              }
+            },
+            {
+              "scope": "selection-help-notices",
+              "importance": "high",
+              "title": {
+                "zh-CN": "框选与提示界面",
+                "zh-TW": "框選與提示介面",
+                "en": "Selection and notices"
+              },
+              "body": {
+                "zh-CN": "框选使用深色十字与白色描边，新增延时规则气泡，明确起止波峰或波谷并整理图表说明。移除提示左侧色条，计算警告采用统一圆角淡色框，确认弹窗使用对齐的纯文字说明。",
+                "zh-TW": "框選採用深色十字與白色描邊，新增延時規則氣泡，明確起止波峰或波谷並整理圖表說明。移除提示左側色條，計算警告採用統一圓角淡色框，確認視窗使用對齊的純文字說明。",
+                "en": "Uses a dark selection crosshair with a white outline, delayed rule help and explicit start/end peaks or troughs. Chart instructions are simplified. Notices lose the decorative left rail; calculation warnings use rounded pale borders and confirmations use aligned plain text."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "version": "6.5.0",
       "date": "2026-11-15",
       "channel": "stable",
