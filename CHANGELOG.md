@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.5.1 — 2026-11-16
+
+修复工作区保存、关闭与删除；新增科学计算器和自动过程回顾；完善采集状态、模型连接、承重下沉时机、70/60/50 mm 教学高度、框选光标与提示样式。沿用 6.5.0 物理参数，保留旧记录。详见 [发行记录](docs/releases/v6.5.1.md)。
+
 ## 6.5.0 — 2026-11-15
 
 - Both heat-capacity experiments use accepted ideal and realistic air/helium profiles checked against predefined conditions. Piston calculations use the loaded equilibrium gas pressure.
