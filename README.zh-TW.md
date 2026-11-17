@@ -4,9 +4,9 @@
 
 氣律實驗室是 Windows 實驗教學工作臺，將三維儀器操作、物理模擬、資料採集、逐步計算及實驗報告放在同一流程中。適用於硬球分子動力學、理想氣體關係，以及空氣和氦氣比熱容比實驗。
 
-**目前正式版：6.5.3**
+**目前正式版：6.5.4**
 
-[下載 Windows 64 位元安裝程式](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.3/heat-capacity-lab-setup-6.5.3.exe) · [版本說明與全部資產](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.3) · [發行核驗記錄](docs/releases/v6.5.3.md) · [原始碼 Release](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/releases/tag/v6.5.3)
+[下載 Windows 64 位元安裝程式](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/download/v6.5.4/heat-capacity-lab-setup-6.5.4.exe) · [版本說明與全部資產](https://github.com/yanshi-qibixunchang/gas-laws-lab-release/releases/tag/v6.5.4) · [發行核驗記錄](docs/releases/v6.5.4.md) · [原始碼 Release](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/releases/tag/v6.5.4)
 
 ## 實驗內容
 
@@ -19,15 +19,15 @@
 
 兩種比熱容比實驗均支援**空氣／氦氣、理想／真實條件**，以及演示、引導、自由模式。介面提供簡體中文、繁體中文及英文，支援明暗主題。桌面版可依實驗支援的項目匯出 PDF 報告、PDF／PNG 圖像、CSV 及資料包。
 
-## 6.5.3 更新內容
+## 6.5.4 更新內容
 
-- 真實空氣與氦氣採用動態壓強內部耗散，並將同一耗散功率計入氣體內能，同時保留對外換熱。重新設定剩餘機械損耗、換熱、感測器響應及尾段擾動；兩種氣體的啟用參數均為非零值。
-- 新建、完整重設或恢復預設參數後使用新設定；舊實驗繼續使用原模型版本、參數快照及記錄。已知總體積單次計算與未知體積多高度計算流程保持相容，第三方依賴版本不變。
-- 固定空氣主圖前 100 ms 的波形 R² 為 0.9589，但首峰及包絡偏差仍超限，留出曲線僅 4/16 條同時滿足四項門檻。空氣五類工況通過；氦氣最佳操作原批次有 3 個連續三次均值視窗超限，且尚無實測波形驗證。本版採用經確認的教學參數，不宣稱完成全面儀器標定。
+- 採用本次確認的空氣、氦氣參數，調整剩餘機械損耗、換熱、感測器響應及尾段擾動。內部耗散與對外換熱繼續同時啟用，各啟用係數保持非零；示範與引導仍採用 70、60、50 mm。
+- 新建、完整重設或恢復預設參數後使用 6.5.4 設定；6.5.3 及更早實驗繼續沿用各自模型、參數快照及擷取記錄。相容已知總體積與未知體積計算，第三方依賴版本不變。
+- 70、60、50 mm 下每種氣體共 450 次正常操作結果：空氣 1.346–1.568，7 次超出 1.3400–1.4600；氦氣 1.662–1.668，均在按 25/21 換算的正常操作範圍內。空氣波形留出複核仍為 4/16 條通過，氦氣尚無實測波形核驗；不宣稱全面標定。
 
 ## 安裝、升級與資料
 
-下載正式安裝程式並依精靈操作。已安裝 **6.5.2 或更早版本** 的使用者可在軟體中檢查更新，也可先儲存並正常結束，再將完整安裝程式裝到原安裝目錄。
+下載正式安裝程式並依精靈操作。已安裝 **6.5.3 或更早版本** 的使用者可在軟體中檢查更新，也可先儲存並正常結束，再將完整安裝程式裝到原安裝目錄。
 
 升級沿用應用識別及資料目錄。舊實驗保留歷史模型、參數快照、原始記錄與計算進度，新建實驗使用現行模型。較早版本若觸發既有遷移規則，以軟體提示為準。
 
@@ -37,16 +37,16 @@
 
 「理想／真實」表示實驗過程條件。理想條件仍需正確操作；真實條件加入熱交換、機械損耗及測量影響，核驗範圍與未通過項均有明確記錄，不代表所有實體裝置都會得到相同結果。氦氣部分工況採用已確認的空氣範圍按精確比例 25/21 確定驗收範圍，不應視為氦氣實測曲線。
 
-三維儀器模型負責展示與互動，數值由軟體物理模型產生。絕熱膨脹裝置參考多種教學儀器，其中包括 FD-NCD-C；本專案不是該設備的官方模擬或數位複刻。模型、音效及物理文獻來源可在軟體「關於」及 [第三方說明](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.3/THIRD_PARTY_NOTICES.md) 中查看。
+三維儀器模型負責展示與互動，數值由軟體物理模型產生。絕熱膨脹裝置參考多種教學儀器，其中包括 FD-NCD-C；本專案不是該設備的官方模擬或數位複刻。模型、音效及物理文獻來源可在軟體「關於」及 [第三方說明](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.4/THIRD_PARTY_NOTICES.md) 中查看。
 
 ## 下載與更新資料
 
 在軟體「說明 → 關於」中檢查更新。本倉庫同時提供同版安裝程式、`.exe.blockmap` 及 `latest.yml`；自動更新遇到網路問題時，可下載完整安裝程式覆蓋原安裝位置。
 
-本倉庫僅存放發行資料。開發原始碼、建置方法與版本標籤見 [公開原始碼歷史](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/tree/v6.5.3)。[CHANGELOG.md](CHANGELOG.md) 保留版本歷史。已撤回的 5.1.2 實驗版資料不在相容承諾內。
+本倉庫僅存放發行資料。開發原始碼、建置方法與版本標籤見 [公開原始碼歷史](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/tree/v6.5.4)。[CHANGELOG.md](CHANGELOG.md) 保留版本歷史。已撤回的 5.1.2 實驗版資料不在相容承諾內。
 
 ## 授權與回饋
 
-專案原始碼未宣告開源授權；公開可讀不等於取得再散布權利。第三方程式庫、字型、音效、模型及匯出器依各自記錄的授權或權利狀態使用，軟體內提供精確版本的第三方清單。參見 [THIRD_PARTY_NOTICES.md](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.3/THIRD_PARTY_NOTICES.md)、[安全說明](SECURITY.md) 及 [協作說明](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.3/CONTRIBUTING.md)。
+專案原始碼未宣告開源授權；公開可讀不等於取得再散布權利。第三方程式庫、字型、音效、模型及匯出器依各自記錄的授權或權利狀態使用，軟體內提供精確版本的第三方清單。參見 [THIRD_PARTY_NOTICES.md](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.4/THIRD_PARTY_NOTICES.md)、[安全說明](SECURITY.md) 及 [協作說明](https://github.com/yanshi-qibixunchang/gas-laws-lab-history/blob/v6.5.4/CONTRIBUTING.md)。
 
-回饋時請附上軟體版本、實驗方法、氣體與條件、操作步驟及截圖。分享實驗檔前請移除個人資訊。6.5.3 發佈後的修正將記錄於後續修補版本。
+回饋時請附上軟體版本、實驗方法、氣體與條件、操作步驟及截圖。分享實驗檔前請移除個人資訊。6.5.4 發佈後的修正將記錄於後續修補版本。
